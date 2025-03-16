@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>AZ ODO GEN</title>
+  <script type="text/javascript" src="ODO_WEB_JS.js"></script>
+  <link rel="stylesheet" href="ODO_WEB_CSS.css">
+</head>
+<body onload="setDatePlaceholder()">
+<body style="background-color: #f0ffff;">
+  <form name = "web" class = "web">
+  <h1>AZ Odometer Statement Generator</h1><br><br>
+
+  <label for="nameInput">Enter Customer Name:</label>
+  <input type="text" id="nameInput" name="nameInput" required><br>
+
+  <label for="vinInput">Enter Vin:</label>
+  <input type="text" id="vinInput" name="vinInput" required><br>
+
+  <label for="employeeInput">Enter Employee Name:</label>
+  <input type="text" id="employeeInput" name="employeeInput"><br>
+
+  <label for="dateInput">Enter Date:</label>
+  <input type="date" id="dateInput" name="dateInput" placeholder=""><br>
+  </form>
+  <br><br><br>
+  <button onclick="generate()">Generate ODO</button>
+  <br><br><br><br>
+<label id="emailLabel">
+  Having Issues?<br>
+  Report it here:
+</label>
+  <button id="emailButton" onclick="sendEmail()"><img src="emailPic.jpg" style="height: 66px; width: 100px;"</button>
+</body>
+</html>
+

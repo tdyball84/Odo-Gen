@@ -1,0 +1,123 @@
+#printableForm {
+ padding-top: 1.65in;
+ line-height: 1.95;
+}
+body {
+ margin: 0 auto;
+ max-width: 8.5in;
+ font-size: 12pt;
+ font-family: Arial, sans-serif;
+}
+.p0, .p1, .p10, .p00 {
+  display: inline-block;
+}
+.p0 {	
+  margin-left: 1.6in;
+}
+.p1 {
+  margin-left: .8in;
+}
+.p10 {
+  margin-left: .1in;
+}
+.p00{
+  float: right; 
+  margin-right: 1in;
+  text-align: right;
+}
+
+.p2, .p3 {
+  display: inline-block;
+  margin-left: 1.7in;
+}
+.p3{
+  margin-left: auto;
+  float: right; 
+  margin-right: 2.75in;
+  text-align: right;
+}
+.p4, .p40 {
+   display: inline-block;
+   margin-left: 2.5in;
+   margin-top: 1.25em;
+}
+.p40 {
+  float: right; 
+  margin-right: 1in;
+  text-align: right;
+}
+
+.p5, .p6 {
+   display: inline-block;
+}
+.p5 {
+  margin-left: 2in;
+  margin-right: 1.4in;
+}
+.p6 {
+  margin-left: .45in;
+}
+.p7{
+   margin-left: 1.5in; 
+}
+.p8 {
+  margin-left: 1.5in;
+}
+button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 25px;
+  padding: 10px 25px;
+  background-color: skyblue;
+}
+button:hover {
+      background-color:#002ead;
+      transition: 0.7s;
+  }
+#emailLabel {
+ position: fixed;
+  bottom: 200px;
+  right: 92px;
+  font-size: 16pt;
+  font-weight: bold;
+  text-align: center;
+}
+
+#emailButton {
+  position: fixed;
+  bottom: 100px;
+  right: 100px;
+  padding: 10px 20px;
+  width: 150px;
+  height: 100px;
+  align-items: center;
+  justify-content: center; 
+  gap: 10px;
+}  
+.web{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+@media print {
+  @page {
+    margin: 0;
+  }
+  body {
+    margin: 0;
+  }
+  button {
+    display: none;
+  }
+}
+
+    
