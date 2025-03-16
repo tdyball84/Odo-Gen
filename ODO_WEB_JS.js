@@ -55,7 +55,7 @@ async function generate() {
       if (body.includes("Minivan")) {
         body = "Minivan";
       }
-      if (model.includes("Soul") || model.includes("Niro") || model.includes("C-MAX") || model.includes("Outback") || model.includes("Venza") || model.includes("Impreza") || model.includes("A4")){
+      if (model.includes("Soul") || model.includes("Niro") || model.includes("C-Max") || model.includes("Outback") || model.includes("Venza") || model.includes("Impreza") || model.includes("A4")){
         body = "Wagon";
       }
       
