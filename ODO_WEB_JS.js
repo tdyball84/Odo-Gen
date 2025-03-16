@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("name").textContent = localStorage.getItem("name") || "N/A";
   document.getElementById("name2").textContent = localStorage.getItem("name") || "N/A";
   document.getElementById("vin").textContent = localStorage.getItem("vin") || "N/A";
-  document.getElementById("employee").textContent = localStorage.getItem("employee") || "N/A;
+  document.getElementById("employee").textContent = localStorage.getItem("employee") || "";
   document.getElementById("nDate").textContent = localStorage.getItem("nDate") || "N/A";
 });
 function printForm() {
