@@ -3,10 +3,7 @@ setDatePlaceholder() {
   const year = today.getFullYear();
   const month = (today.getMonth() + 1).toString().padStart(2, '0');
   const day = today.getDate().toString().padStart(2, '0');
-
   const formattedDate = ${year}-${month}-${day};
-
-  // Set the value attribute of the input element
   document.getElementById('dateInput').value = formattedDate;
 }
 async function generate() {
@@ -66,7 +63,7 @@ async function generate() {
       localStorage.setItem("vin", vin);
       localStorage.setItem("employee", employee || "");
       localStorage.setItem("nDate", nDate);
-      window.location.href = "ODO_PRINT.html"
+      window.location.href = "ODO_PRINT.html";
     }
     } catch (error) {
       console.error('Error decoding VIN:', error);
@@ -96,5 +93,5 @@ function sendEmail() {
   const subject = "Bug in ODO App";
   const body = "I have found a bug! VIN: (type here), Summary:";
   const gmailUrl = https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(recipient)}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)};
-  window.open(gmailUrl, '_blank')
+  window.open(gmailUrl, '_blank');
 }
