@@ -1,15 +1,4 @@
 
-function setDatePlaceholder() {
-  const today = new Date();
-  const year = today.getFullYear();
-  const month = (today.getMonth() + 1).toString().padStart(2, '0');
-  const day = today.getDate().toString().padStart(2, '0');
-
-  const formattedDate = `${year}-${month}-${day}`;
-
-  // Set the value attribute of the input element
-  document.getElementById('dateInput').value = formattedDate;
-}
 async function generate() {
   const name = document.getElementById('nameInput').value;
   const vin = document.getElementById('vinInput').value;
@@ -32,7 +21,7 @@ async function generate() {
       if (make.includes("Unknown") || year.includes("Unknown") || body.includes("Unknown")) {
         alert("INVALID VIN");
       }
-      else{
+      else {
 
       if (body.includes("Sport Utility Vehicle") || body.includes("Multi-Purpose Vehicle")) {
         body = "SUV";
@@ -58,14 +47,13 @@ async function generate() {
       if (model.includes("Soul") || model.includes("Niro") || model.includes("C-Max") || model.includes("Outback") || model.includes("Venza") || model.includes("Impreza") || model.includes("A4")){
         body = "Wagon";
       }
-      
 
       localStorage.setItem("make", make);
       localStorage.setItem("year", year);
       localStorage.setItem("body", body);
       localStorage.setItem("name", name);
       localStorage.setItem("vin", vin);
-      localStorage.setItem("employee", employee);
+      localStorage.setItem("employee", employee || ""); // Allow blank value for employee
       localStorage.setItem("nDate", nDate);
       window.location.href = "ODO_PRINT.html"
     }
@@ -80,6 +68,7 @@ async function generate() {
     alert("INVALID VIN");
   }
 }
+
 document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("make").textContent = localStorage.getItem("make") || "N/A";
   document.getElementById("year").textContent = localStorage.getItem("year") || "N/A";
@@ -87,17 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("name").textContent = localStorage.getItem("name") || "N/A";
   document.getElementById("name2").textContent = localStorage.getItem("name") || "N/A";
   document.getElementById("vin").textContent = localStorage.getItem("vin") || "N/A";
-  document.getElementById("employee").textContent = localStorage.getItem("employee");
+  document.getElementById("employee").textContent = localStorage.getItem("employee") || ""; // Handle blank employee value
   document.getElementById("nDate").textContent = localStorage.getItem("nDate") || "N/A";
 });
-function printForm() {
-  window.print();
-}
-function sendEmail() {
-  const recipient = "timothy.dyball@carvana.com";
-  const subject = "Bug in ODO App";
-  const body = "I have found a bug! VIN: (type here), Summary:";
-  const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(recipient)}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-  window.open(gmailUrl, '_blank')
-}
-    
+
