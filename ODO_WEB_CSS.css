@@ -107,6 +107,9 @@ button:hover {
   padding: 30px;
   box-sizing: border-box;
 }
+#employee {
+  white-space: pre;
+}
 
 @media print {
   @page {
