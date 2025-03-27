@@ -35,7 +35,7 @@ alert("INVALID VIN");
 }
 else{
 
-if (body.includes("Sport Utility Vehicle") || body.includes("Multi-Purpose Vehicle")) {
+if (body.includes("Sport Utility Vehicle") || body.includes("Multi-Purpose Vehicle")) || body.includes("Crossover Utility Vehicle"){
 body = "SUV";
 }
 if (body.includes("Sedan")) {
