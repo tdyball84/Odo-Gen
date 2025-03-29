@@ -13,9 +13,13 @@ body {
 }
 .p0 {	
   margin-left: 1.6in;
+  width: 3in;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .p1 {
   margin-left: .8in;
+  width: 3in;
 }
 .p10 {
   margin-left: .1in;
