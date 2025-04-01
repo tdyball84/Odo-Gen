@@ -94,6 +94,14 @@ document.getElementById("nDate").textContent = localStorage.getItem("nDate") || 
 function printForm() {
 window.print();
 }
+function openPopup() {
+ document.getElementById('popup').style.display = 'block';
+ document.getElementById('overlay').style.display = 'block';
+}
+function closePopup() {
+ document.getElementById('popup').style.display = 'none';
+ document.getElementById('overlay').style.display = 'none';
+}
 function sendEmail() {
 const recipient = "timothy.dyball@carvana.com";
 const subject = "Bug in ODO App";
