@@ -9,20 +9,20 @@ body {
  font-family: Arial, sans-serif;
 }
 .p0, .p1, .p10, .p00 {
-  display: inline-block;
+  position: absolute;
+  white-space: nowrap;
 }
 .p0 {	
-  margin-left: 1.6in;
+  left: 1.6in;
 }
 .p1 {
-  margin-left: .8in;
+  left: 0.8in;
 }
 .p10 {
-  margin-left: .1in;
+  left: 0.1in;
 }
-.p00{
-  float: right; 
-  margin-right: 1in;
+.p00 {
+  right: 1in;
   text-align: right;
 }
 
