@@ -16,10 +16,10 @@ body {
   left: 1.6in;
 }
 .p1 {
-  left: 0.8in;
+  left: calc(1.6in + 0.8in);
 }
 .p10 {
-  left: 0.1in;
+  left: calc(1.6in + 0.8in + 0.1in);
 }
 .p00 {
   right: 1in;
