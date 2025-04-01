@@ -12,20 +12,19 @@ body {
   position: absolute;
   white-space: nowrap;
 }
-.p0 {	
+.p0 {
   left: 1.6in;
 }
 .p1 {
-  left: calc(1.6in + 0.8in);
+  left: 2.5in;
 }
 .p10 {
-  left: calc(1.6in + 0.8in + 0.1in);
+  left: 2.6in;
 }
 .p00 {
   right: 1in;
   text-align: right;
 }
-
 .p2, .p3 {
   display: inline-block;
   margin-left: 1.7in;
