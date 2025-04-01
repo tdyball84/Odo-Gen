@@ -6,8 +6,7 @@
   <script type="text/javascript" src="ODO_WEB_JS.js"></script>
   <link rel="stylesheet" href="ODO_WEB_CSS.css">
 </head>
-<body onload="setDatePlaceholder()">
-<body style="background-color: #f0ffff;">
+<body onload="setDatePlaceholder()" style="background-color: #f0ffff;">
   <form name = "web" class = "web">
   <h1>AZ Odometer Statement Generator</h1><br><br>
 
@@ -22,15 +21,60 @@
 
   <label for="dateInput">Enter Date:</label>
   <input type="date" id="dateInput" name="dateInput" placeholder=""><br>
+  <button type="button" onclick="generate()">Generate ODO</button>
   </form>
-  <br><br><br>
-  <button onclick="generate()">Generate ODO</button>
   <br><br><br><br>
+  <button id="instructionsButton" onclick="openPopup()">Show Printing Instructions</button>
+    <div class="overlay" id="overlay" onclick="closePopup()"></div>
+    <div class="popup" id="popup">
+      <button class="close-btn" onclick="closePopup()">Close</button>
+      <h2>Printing Instructions</h2>
+      <p><strong>1. Enter Required Information:</strong></p>
+      <ul>
+        <li>Customer Name</li>
+        <li>VIN</li>
+        <li>Employee Name (leave blank if printing a future ODO)</li>
+      </ul>
+      <p><strong>2. Date Settings:</strong></p>
+      <ul>
+        <li>The date is automatically set to the current date.</li>
+        <li>If printing a future ODO, clear the date field.</li>
+      </ul>
+      <p><strong>3. Generating the Print Preview:</strong></p>
+      <ul>
+       <li>Click the <strong>Generate</strong> button.</li>
+       <li>A new page will open with the print preview.</li>
+      </ul>
+      <p><strong>4. Printer Selection & Quality Settings:</strong></p>
+      <ul>
+        <li>Select <strong>EPSON LX 350+</strong> as the printer.</li>
+        <li>Ensure the print quality is set to Max DPI: (240x144 or 120x77)</li>
+      </ul>
+      <p><strong>5. Paper Guide & Adjustments:</strong></p>
+      <ul>
+        <li><strong>For Chromebook Users:</strong></li>
+      <ul>
+        <li>Set the blue guide on the left to the "10" marker.</li>
+        <li>Apply slight pressure when inserting the ODO sheet.</li>
+      </ul>
+        <li><strong>For ThinkCentre (Windows) Users:</strong></li>
+      <ul>
+        <li>Set the blue guide on the left to the "9.4" marker.</li>
+        <li>(You should see six small tally marks on the right side of the 10.)</li>
+        <li>Apply slight pressure when inserting the ODO sheet.</li>
+         <li>Press the <strong>Micro-Adjust DOWN</strong> arrow once.</li>
+      </ul>
+      </ul>
+    </div>
+  <br><br><br><br>
+<div id= "emailContainer">
 <label id="emailLabel">
   Having Issues?<br>
   Report it here:
 </label>
-  <button id="emailButton" onclick="sendEmail()"><img src="emailPic.jpg" style="height: 66px; width: 100px;"</button>
+<button id="emailButton" onclick="sendEmail()"><img src="emailPic.jpg" style="height: 66px; width: 100px;"></button>
+</div>
 </body>
 </html>
+
 
