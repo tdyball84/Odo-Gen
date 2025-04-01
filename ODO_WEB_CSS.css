@@ -17,10 +17,11 @@ body {
 }
 .p1 {
   position: absolute;
-  left: 2.4in;         
+  left: 4.35in;         
 }
 .p10 {
-  margin-left: 0.1in;
+  position: absolute;
+  left: 5in;  
 }
 .p00 {
   float: right; 
