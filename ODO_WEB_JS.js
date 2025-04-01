@@ -101,3 +101,6 @@ const body = "I have found a bug! VIN: (type here), Summary:";
 const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(recipient)}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 window.open(gmailUrl, '_blank')
 }
+function printOnLoad() {
+  window.print();
+}
