@@ -16,7 +16,12 @@ const vin = document.getElementById('vinInput').value;
 const employeeInput = document.getElementById('employeeInput').value;
 const employee = employeeInput.trim() === "" ? " " : employeeInput;
 const rDate = document.getElementById('dateInput').value;
-const nDate = rDate.split('-').slice(1).join('/') + '/' + rDate.split('-')[0];
+let nDate = "";
+if (rDate) {
+    nDate = rDate.split('-').slice(1).join('/') + '/' + rDate.split('-')[0];
+} else {
+    nDate = " "; // Set to a blank space if no date is entered
+}
 
 if (vin.length === 17) {
 try {
