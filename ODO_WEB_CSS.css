@@ -1,20 +1,20 @@
 #printableForm {
- padding-top: 1.7in;
- line-height: 1.95;
- max-height: 100vh
- overflow: auto;
+  padding-top: 1.7in;
+  line-height: 1.95;
+  max-height: 100vh
+  overflow: auto;
 }
 body {
- background: linear-gradient(to right, #001F3F, #007BFF);
- color: white;
- margin: 0 auto;
- max-width: 8.5in;
- font-size: 12pt;
- font-family: 'Poppins', sans-serif;
- height: 100vh;
- display: flex;
- flex-direction: column;
- justify-content: space-between; 
+  background: linear-gradient(to right, #001F3F, #007BFF);
+  color: white;
+  margin: 0 auto;
+  max-width: 8.5in;
+  font-size: 12pt;
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
 }
 .container {
   position: relative;
@@ -54,9 +54,9 @@ body {
   text-align: right;
 }
 .p4, .p40 {
-   display: inline-block;
-   margin-left: 2.5in;
-   margin-top: 1.25em;
+  display: inline-block;
+  margin-left: 2.5in;
+  margin-top: 1.25em;
 }
 .p40 {
   float: right; 
@@ -65,7 +65,7 @@ body {
 }
 
 .p5, .p6 {
-   display: inline-block;
+  display: inline-block;
 }
 .p5 {
   margin-left: 2in;
@@ -75,26 +75,26 @@ body {
   margin-left: .45in;
 }
 .p7{
-   margin-left: 1.5in; 
+  margin-left: 1.5in; 
 }
 .p8 {
   margin-left: 1.5in;
 }
 button {
-    display: block;
-    width: 100%;
-    max-width: 200px;
-    margin: 15px auto;
-    font-size: 20px;
-    font-weight: bold;
-    padding: 12px;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  display: block;
+  width: 100%;
+  max-width: 200px;
+  margin: 15px auto;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 12px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 button:hover {
     background: #0056b3;
@@ -137,16 +137,19 @@ button:hover {
 #emailContainer {
   display: flex;
   flex-direction: row;
-  justify-content: center; 
+  justify-content: flex-end; 
   align-items: center; 
-  height: auto; 
+  width: 100%
   padding: 20px;
+  margin-top: auto;
 }
 
 #emailLabel {
   font-size: 16pt;
   font-weight: bold;
   text-align: right;
+  margin-right: 20px;
+  color: white;
 }
 
 #emailButton {
@@ -156,6 +159,12 @@ button:hover {
   margin-top: 10px;
   margin-right: 20px;
 }
+#instructionsButton{
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
 .web{
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
