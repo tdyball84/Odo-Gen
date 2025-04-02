@@ -1,6 +1,8 @@
 #printableForm {
  padding-top: 1.7in;
  line-height: 1.95;
+ max-height: 100vh
+ overflow: auto;
 }
 body {
  background: linear-gradient(to right, #001F3F, #007BFF);
@@ -9,6 +11,10 @@ body {
  max-width: 8.5in;
  font-size: 12pt;
  font-family: 'Poppins', sans-serif;
+ height: 100vh;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between; 
 }
 .container {
   position: relative;
@@ -130,11 +136,11 @@ button:hover {
 
 #emailContainer {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center; 
   align-items: center; 
-  height: auto; /* Avoid forcing full viewport height */
-  padding: 20px; /* Add some spacing */
+  height: auto; 
+  padding: 20px;
 }
 
 #emailLabel {
@@ -147,7 +153,8 @@ button:hover {
   padding: 10px 20px;
   width: 150px;
   height: 100px;
-  margin-top: 10px; /* Add some space between the label and button */
+  margin-top: 10px;
+  margin-right: 20px;
 }
 .web{
   background: rgba(255, 255, 255, 0.1);
