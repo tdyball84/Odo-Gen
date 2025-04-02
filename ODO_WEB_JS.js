@@ -11,7 +11,8 @@ const formattedDate = `${year}-${month}-${day}`;
 document.getElementById('dateInput').value = formattedDate;
 }
 async function generate() {
-const name = document.getElementById('nameInput').value;
+const nameInput = document.getElementById('nameInput').value;
+const name = nameInput.trim() === "" ? " " : nameInput;
 const vin = document.getElementById('vinInput').value;
 const employeeInput = document.getElementById('employeeInput').value;
 const employee = employeeInput.trim() === "" ? " " : employeeInput;
@@ -90,8 +91,8 @@ document.addEventListener("DOMContentLoaded", () => {
 document.getElementById("make").textContent = localStorage.getItem("make") || "N/A";
 document.getElementById("year").textContent = localStorage.getItem("year") || "N/A";
 document.getElementById("body").textContent = localStorage.getItem("body") || "N/A";
-document.getElementById("name").textContent = localStorage.getItem("name") || "N/A";
-document.getElementById("name2").textContent = localStorage.getItem("name") || "N/A";
+document.getElementById("name").textContent = localStorage.getItem("name") || " ";
+document.getElementById("name2").textContent = localStorage.getItem("name") || " ";
 document.getElementById("vin").textContent = localStorage.getItem("vin") || "N/A";
 document.getElementById("employee").textContent = localStorage.getItem("employee") || " ";
 document.getElementById("nDate").textContent = localStorage.getItem("nDate") || "N/A";
