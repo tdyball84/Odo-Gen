@@ -146,7 +146,7 @@ button:hover {
 #emailLabel {
   font-size: 16pt;
   font-weight: bold;
-  text-align: center;
+  text-align: right;
 }
 
 #emailButton {
