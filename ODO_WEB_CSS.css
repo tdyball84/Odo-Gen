@@ -136,33 +136,35 @@ button:hover {
 
 #emailContainer {
   display: flex;
-  flex-direction: row;
   justify-content: flex-end; 
   align-items: center; 
-  width: 100%
+  width: 100%;
   padding: 20px;
   margin-top: auto;
+  position: relative;
 }
 
 #emailLabel {
   font-size: 16pt;
   font-weight: bold;
   text-align: right;
-  margin-right: 20px;
+  margin-right: 10px;
   color: white;
+  margin-bottom: 5px;
 }
 
 #emailButton {
   padding: 10px 20px;
   width: 150px;
   height: 100px;
-  margin-top: 10px;
   margin-right: 20px;
-}
-#instructionsButton{
-  width: 100%;
+
+#instructionsButton {
+  display: inline-block;
+  width: auto;
   max-width: 300px;
-  margin: 0 auto;
+  margin: 0 10px;
+  padding: 12px 20px;
 }
 
 .web{
