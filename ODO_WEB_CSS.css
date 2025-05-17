@@ -62,10 +62,12 @@ body {
    display: inline-block;
 }
 .p5 {
-  margin-left: 2in;
+  margin-left: 1in;
   margin-right: 1.4in;
 }
 .p6 {
+  position: absolute;
+  left: 5.2in
   margin-left: .45in;
 }
 .p7{
