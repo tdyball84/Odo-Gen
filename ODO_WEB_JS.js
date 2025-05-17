@@ -10,6 +10,9 @@ const formattedDate = `${year}-${month}-${day}`;
 // Set the value attribute of the input element
 document.getElementById('dateInput').value = formattedDate;
 }
+function setLocation(location) {
+  localStorage.setItem('location', location);
+}
 async function generate() {
 const nameInput = document.getElementById('nameInput').value;
 const name = nameInput.trim() === "" ? " " : nameInput;
