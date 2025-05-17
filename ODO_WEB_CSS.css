@@ -58,38 +58,38 @@ body {
 .p4 {
   position: absolute;
   left: 2in;
-  top: 3.5in;
+  top: 0in;
 }
 
 .p40 {
   position: absolute;
   left: 6.5in;
-  top: 3.5in;
+  top: 0in;
   text-align: right;
 }
 
 .p5 {
   position: absolute;
   left: 2in;
-  top: 3.8in;
+  top: 0.3in;
 }
 
 #addressCity {
   position: absolute;
   left: 4.6in;
-  top: 3.8in;
+  top: 0.3in;
 }
 
 #addressState {
   position: absolute;
   left: 6.1in;
-  top: 3.8in;
+  top: 0.3in;
 }
 
 #addressZip {
   position: absolute;
   left: 6.6in;
-  top: 3.8in;
+  top: 0.3in;
 }
 
 .p7 {
