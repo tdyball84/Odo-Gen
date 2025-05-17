@@ -65,6 +65,9 @@ body = "Minivan";
 if (model.includes("Soul") || model.includes("Niro") || model.includes("C-Max") || model.includes("Outback") || model.includes("Venza") || model.includes("Impreza") || model.includes("A4")){
 body = "Wagon";
 }
+if (model.includes("Kicks")){
+body = "SUV";
+}
 
 
 localStorage.setItem("make", make);
