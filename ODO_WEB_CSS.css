@@ -186,7 +186,24 @@ button:hover {
     display: none;
   }
 }
+input[type="radio"] {
+  margin-right: 5px;
+  accent-color: #007BFF;
+}
+label[for="tolleson"], label[for="casa"] {
+  margin-right: 15px;
+  font-weight: bold;
+}
+.radio-buttons {
+  text-align: center;
+  margin-top: 10px;
+}
 
+.radio-buttons label {
+  display: inline-block;
+  margin: 0 20px;
+  font-size: 14pt;
+}
 
 
     
