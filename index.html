@@ -23,12 +23,16 @@
   <input type="date" id="dateInput" name="dateInput" placeholder=""><br>
 
   <label>Select Location:</label><br>
-  <div class="radio-buttons">
+<div class="radio-buttons">
+  <label>
     <input type="radio" id="tolleson" name="location" value="tolleson" checked onchange="setLocation('tolleson')">
-    <label for="tolleson">Tolleson</label>
+    Tolleson
+  </label>
+  <label>
     <input type="radio" id="casa" name="location" value="casa" onchange="setLocation('casa')">
-    <label for="casa">Casa Grande</label>
-  </div>
+    Casa Grande
+  </label>
+</div>
 
   <br><br>
   <button type="button" onclick="generate()">Generate ODO</button>
