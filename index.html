@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="ODO_WEB_CSS.css">
 </head>
 <body onload="setDatePlaceholder()" style="background-color: #f0ffff;">
-  <form name = "web" class = "web">
+<form name="web" class="web">
   <h1>AZ Odometer Statement Generator</h1><br><br>
 
   <label for="nameInput">Enter Customer Name:</label>
@@ -21,12 +21,18 @@
 
   <label for="dateInput">Enter Date:</label>
   <input type="date" id="dateInput" name="dateInput" placeholder=""><br>
+
   <label>Select Location:</label><br>
-  <input type="radio" id="tolleson" name="location" value="tolleson" checked onchange="setLocation('tolleson')">
-  <label for="tolleson">Tolleson</label>
-  <input type="radio" id="casa" name="location" value="casa" onchange="setLocation('casa')">
-  <label for="casa">Casa Grande</label><br><br>
+  <div class="radio-buttons">
+    <input type="radio" id="tolleson" name="location" value="tolleson" checked onchange="setLocation('tolleson')">
+    <label for="tolleson">Tolleson</label>
+    <input type="radio" id="casa" name="location" value="casa" onchange="setLocation('casa')">
+    <label for="casa">Casa Grande</label>
+  </div>
+
+  <br><br>
   <button type="button" onclick="generate()">Generate ODO</button>
+</form>
   </form>
   <br><br><br><br>
   <button id="instructionsButton" onclick="openPopup()">Show Printing Instructions</button>
