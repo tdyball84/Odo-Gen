@@ -1,18 +1,20 @@
 #printableForm {
- padding-top: 1.7in;
- line-height: 1.95;
+  padding-top: 1.7in;
+  line-height: 1.95;
 }
+
 body {
- background: linear-gradient(to right, #001F3F, #007BFF);
- color: white;
- margin: 0 auto;
- max-width: 8.5in;
- font-size: 12pt;
- font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #001F3F, #007BFF);
+  color: white;
+  margin: 0 auto;
+  max-width: 8.5in;
+  font-size: 12pt;
+  font-family: 'Poppins', sans-serif;
 }
+
 .container {
   position: relative;
-  width: 100%; 
+  width: 100%;
   max-width: 8.5in;
   margin: 0 auto;
 }
@@ -21,106 +23,135 @@ body {
   display: inline-block;
   white-space: nowrap;
 }
+
 .p0 {
   margin-left: 1.6in;
 }
+
 .p1 {
   position: absolute;
-  left: 4.2in;         
+  left: 4.2in;
 }
+
 .p10 {
   position: absolute;
-  left: 4.8in;  
+  left: 4.8in;
 }
+
 .p00 {
-  float: right; 
-  margin-right: 1in;
-  text-align: right;
-}
-.p2, .p3 {
-  display: inline-block;
-  margin-left: 0.7in;
-}
-.p3{
-  margin-left: auto;
-  float: right; 
-  margin-right: 2.75in;
-  text-align: right;
-}
-.p4, .p40 {
-   display: inline-block;
-   margin-left: 2in;
-   margin-top: 1.25em;
-}
-.p40 {
-  float: right; 
+  float: right;
   margin-right: 1in;
   text-align: right;
 }
 
-.p5, .p6 {
-   display: inline-block;
+.p2, .p3 {
+  display: inline-block;
+  margin-left: 0.7in;
 }
-.p5 {
-  margin-left: 1in;
-  margin-right: 1.4in;
+
+.p3 {
+  margin-left: auto;
+  float: right;
+  margin-right: 2.75in;
+  text-align: right;
 }
-.p6 {
+
+/* ✅ FIX: Position p4 and p40 absolutely to avoid shifting */
+.p4 {
   position: absolute;
-  left: 5.2in
-  margin-left: .45in;
+  left: 2in;
+  top: 5.2in; /* adjust as needed */
 }
-.p7{
-   margin-left: 1.5in; 
+
+.p40 {
+  position: absolute;
+  left: 6.5in; /* dealer number aligned consistently */
+  top: 5.2in;
+  text-align: right;
 }
+
+.p5 {
+  position: absolute;
+  left: 2in;
+  top: 5.5in;
+}
+
+/* ✅ FIX: Split p6 into city/state/zip with absolute positions */
+#addressCity {
+  position: absolute;
+  left: 4.6in;
+  top: 5.5in;
+}
+
+#addressState {
+  position: absolute;
+  left: 6.1in;
+  top: 5.5in;
+}
+
+#addressZip {
+  position: absolute;
+  left: 6.6in;
+  top: 5.5in;
+}
+
+.p7 {
+  margin-left: 1.5in;
+}
+
 .p8 {
   margin-left: 0.5in;
 }
+
 button {
-    display: block;
-    width: 100%;
-    max-width: 200px;
-    margin: 15px auto;
-    font-size: 20px;
-    font-weight: bold;
-    padding: 12px;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  display: block;
+  width: 100%;
+  max-width: 200px;
+  margin: 15px auto;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 12px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
+
 button:hover {
-    background: #0056b3;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-    transform: translateY(-2px);
+  background: #0056b3;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
 }
+
 .popup {
-    display: none;
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 60%;
-    background: white;
-    padding: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-    border-radius: 8px;
-    z-index: 1000;
-    color: black;
+  display: none;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  background: white;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  z-index: 1000;
+  color: black;
 }
+
 .overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 999;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
 }
+
 .close-btn {
   background: red;
   color: white;
@@ -133,10 +164,10 @@ button:hover {
 #emailContainer {
   display: flex;
   flex-direction: column;
-  justify-content: center; 
-  align-items: center; 
-  height: auto; /* Avoid forcing full viewport height */
-  padding: 20px; /* Add some spacing */
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  padding: 20px;
 }
 
 #emailLabel {
@@ -149,9 +180,10 @@ button:hover {
   padding: 10px 20px;
   width: 150px;
   height: 100px;
-  margin-top: 10px; /* Add some space between the label and button */
+  margin-top: 10px;
 }
-.web{
+
+.web {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   border-radius: 12px;
@@ -164,15 +196,17 @@ button:hover {
   padding: 30px;
   box-sizing: border-box;
 }
+
 .web input {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: none;
-    border-radius: 6px;
-    font-size: 18px;
-    text-align: center;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 6px;
+  font-size: 18px;
+  text-align: center;
 }
+
 #employee {
   white-space: pre;
 }
@@ -188,226 +222,27 @@ button:hover {
     display: none;
   }
 }
-input[type="radio"] {
-  margin-right: 5px;
-  accent-color: #007BFF;
-}
-label[for="tolleson"], label[for="casa"] {
-  margin-right: 15px;
-  font-weight: bold;
-#printableForm {
- padding-top: 1.7in;
- line-height: 1.95;
-}
-body {
- background: linear-gradient(to right, #001F3F, #007BFF);
- color: white;
- margin: 0 auto;
- max-width: 8.5in;
- font-size: 12pt;
- font-family: 'Poppins', sans-serif;
-}
-.container {
-  position: relative;
-  width: 100%; 
-  max-width: 8.5in;
-  margin: 0 auto;
-}
 
-.p0, .p1, .p10, .p00 {
-  display: inline-block;
-  white-space: nowrap;
-}
-.p0 {
-  margin-left: 1.6in;
-}
-.p1 {
-  position: absolute;
-  left: 4.2in;         
-}
-.p10 {
-  position: absolute;
-  left: 4.8in;  
-}
-.p00 {
-  float: right; 
-  margin-right: 1in;
-  text-align: right;
-}
-.p2, .p3 {
-  display: inline-block;
-  margin-left: 0.7in;
-}
-.p3{
-  margin-left: auto;
-  float: right; 
-  margin-right: 2.75in;
-  text-align: right;
-}
-.p4, .p40 {
-   display: inline-block;
-   margin-left: 2in;
-   margin-top: 1.25em;
-}
-.p40 {
-  float: right; 
-  margin-right: 1in;
-  text-align: right;
-}
-
-.p5, .p6 {
-   display: inline-block;
-}
-.p5 {
-  margin-left: 1in;
-  margin-right: 1.4in;
-}
-.p6 {
-  position: absolute;
-  left: 5.2in
-  margin-left: .45in;
-}
-.p7{
-   margin-left: 1.5in; 
-}
-.p8 {
-  margin-left: 0.5in;
-}
-button {
-    display: block;
-    width: 100%;
-    max-width: 200px;
-    margin: 15px auto;
-    font-size: 20px;
-    font-weight: bold;
-    padding: 12px;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-}
-button:hover {
-    background: #0056b3;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-    transform: translateY(-2px);
-}
-.popup {
-    display: none;
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 60%;
-    background: white;
-    padding: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-    border-radius: 8px;
-    z-index: 1000;
-    color: black;
-}
-.overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 999;
-}
-.close-btn {
-  background: red;
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  float: right;
-}
-
-#emailContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center; 
-  align-items: center; 
-  height: auto; /* Avoid forcing full viewport height */
-  padding: 20px; /* Add some spacing */
-}
-
-#emailLabel {
-  font-size: 16pt;
-  font-weight: bold;
-  text-align: center;
-}
-
-#emailButton {
-  padding: 10px 20px;
-  width: 150px;
-  height: 100px;
-  margin-top: 10px; /* Add some space between the label and button */
-}
-.web{
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 30px;
-  box-sizing: border-box;
-}
-.web input {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: none;
-    border-radius: 6px;
-    font-size: 18px;
-    text-align: center;
-}
-#employee {
-  white-space: pre;
-}
-
-@media print {
-  @page {
-    margin: 0;
-  }
-  body {
-    margin: 0;
-  }
-  button {
-    display: none;
-  }
-}
-input[type="radio"] {
-  margin-right: 5px;
-  accent-color: #007BFF;
-}
-label[for="tolleson"], label[for="casa"] {
-  margin-right: 15px;
-  font-weight: bold;
-}
+/* ✅ FIX: Proper inline layout for radio buttons */
 .radio-buttons {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
   margin-top: 10px;
 }
 
 .radio-buttons label {
-  display: inline-block;
-  margin: 0 20px;
+  display: flex;
+  align-items: center;
   font-size: 14pt;
+  font-weight: bold;
+  gap: 8px;
 }
 
+input[type="radio"] {
+  accent-color: #007BFF;
+}
 
-    
-
-    
 
     
 
