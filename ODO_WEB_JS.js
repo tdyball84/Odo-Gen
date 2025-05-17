@@ -13,6 +13,7 @@ document.getElementById('dateInput').value = formattedDate;
 function setLocation(location) {
   localStorage.setItem('location', location);
 }
+
 async function generate() {
 const nameInput = document.getElementById('nameInput').value;
 const name = nameInput.trim() === "" ? " " : nameInput;
@@ -102,6 +103,21 @@ document.getElementById("name2").textContent = localStorage.getItem("name") || "
 document.getElementById("vin").textContent = localStorage.getItem("vin") || "N/A";
 document.getElementById("employee").textContent = localStorage.getItem("employee") || " ";
 document.getElementById("nDate").textContent = localStorage.getItem("nDate") || "N/A";
+
+const location = localStorage.getItem("location") || "tolleson";
+  if (location === "tolleson") {
+    document.getElementById("locationName").textContent = "CARVANA LLC";
+    document.getElementById("locationNumber").textContent = "L00015079";
+    document.getElementById("addressStreet").textContent = "600 S 94th Ave";
+    document.getElementById("addressCity").textContent = "TOLLESON";
+    document.getElementById("addressZip").textContent = "85353";
+  } else if (location === "casa") {
+    document.getElementById("locationName").textContent = "Casa Grande Chrysler Dodge Jeep Ram";
+    document.getElementById("locationNumber").textContent = "L10002668";
+    document.getElementById("addressStreet").textContent = "2425 E Florence Blvd Suite D";
+    document.getElementById("addressCity").textContent = "CASA GRANDE";
+    document.getElementById("addressZip").textContent = "85194";
+  }
 });
 function printForm() {
 window.print();
