@@ -55,43 +55,27 @@ body {
   margin-right: 2.75in;
   text-align: right;
 }
-.p4 {
-  position: absolute;
-  left: 2in;
-  top: 1.8in;
+.p4, .p40 {
+   display: inline-block;
+   margin-left: 2.5in;
+   margin-top: 1.25em;
 }
-
 .p40 {
-  position: absolute;
-  left: 6.5in;
-  top: 1.8in;
+  float: right; 
+  margin-right: 1in;
   text-align: right;
 }
 
+.p5, #addressCity, #addressState, #addressZip {
+   display: inline-block;
+}
 .p5 {
-  position: absolute;
-  left: 2in;
-  top: 2.1in;
+  margin-left: 2in;
+  margin-right: 1.4in;
 }
-
-#addressCity {
-  position: absolute;
-  left: 4.6in;
-  top: 2.1in;
+#addressCity, #addressState, #addressZip  {
+  margin-left: .45in;
 }
-
-#addressState {
-  position: absolute;
-  left: 6.1in;
-  top: 2.1in;
-}
-
-#addressZip {
-  position: absolute;
-  left: 6.6in;
-  top: 2.1in;
-}
-
 .p7 {
   margin-left: 1.5in;
 }
