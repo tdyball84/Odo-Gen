@@ -11,7 +11,14 @@ function setLocation(location) {
   localStorage.setItem('location', location);
 }
 
+function getSelectedLocation() {
+  const selected = document.querySelector('input[name="location"]:checked');
+  return selected ? selected.value : "tolleson"; // fallback if nothing is selected
+}
+
 async function generate() {
+  const location = getSelectedLocation();
+  localStorage.setItem('location', location);
   const nameInput = document.getElementById('nameInput').value;
   const name = nameInput.trim() === "" ? " " : nameInput;
 
@@ -76,7 +83,6 @@ async function generate() {
 
 // Runs on the PRINT page only
 document.addEventListener("DOMContentLoaded", () => {
-localStorage.setItem("location", "tolleson");
   if (!document.getElementById("make")) return; // Exit if not on print page
 
   document.getElementById("make").textContent = localStorage.getItem("make") || "N/A";
