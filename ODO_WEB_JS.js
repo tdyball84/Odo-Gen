@@ -76,6 +76,9 @@ async function generate() {
 
 // Runs on the PRINT page only
 document.addEventListener("DOMContentLoaded", () => {
+  if (!localStorage.getItem("location")) {
+    localStorage.setItem("location", "tolleson");
+  }
   if (!document.getElementById("make")) return; // Exit if not on print page
 
   document.getElementById("make").textContent = localStorage.getItem("make") || "N/A";
