@@ -204,7 +204,6 @@ button:hover {
   }
 }
 
-/* ✅ FIX: Proper inline layout for radio buttons */
 .radio-buttons {
   display: flex;
   justify-content: center;
@@ -223,7 +222,6 @@ button:hover {
 input[type="radio"] {
   accent-color: #007BFF;
 }
-
 
     
 
