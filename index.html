@@ -33,8 +33,20 @@
     Casa Grande
   </label>
 </div>
+<div id="manualInput" style="display: none; margin-top: 1em;">
+  <p style="color: white;"><strong>VIN decoding failed. Please enter details manually:</strong></p>
+  
+  <label for="manualMake" style="color: white;">Make:</label><br>
+  <input type="text" id="manualMake"><br><br>
+  
+  <label for="manualYear" style="color: white;">Year:</label><br>
+  <input type="text" id="manualYear"><br><br>
+  
+  <label for="manualBody" style="color: white;">Body Style:</label><br>
+  <input type="text" id="manualBody"><br><br>
 
-  <br><br>
+  <button type="button" onclick="submitManualData()">Submit Manual Data</button>
+</div>  <br><br>
   <button type="button" onclick="generate()">Generate ODO</button>
 </form>
   </form>
