@@ -40,11 +40,9 @@ async function generate() {
       let body = data.Results.find(item => item.Variable === 'Body Class')?.Value || 'Unknown';
 
       if (make === 'Unknown' || year === 'Unknown' || body === 'Unknown') {
-        alert("INVALID VIN");
-        return;
+        throw new Error("VIN Decode returned incomplete data");
       }
 
-      // Normalize body styles
       if (body.includes("Sport Utility Vehicle") || body.includes("Multi-Purpose Vehicle") || body.includes("Crossover Utility Vehicle")) body = "SUV";
       if (body.includes("Sedan")) body = "Sedan";
       if (body.includes("Hatchback")) body = "Hatchback";
@@ -55,7 +53,6 @@ async function generate() {
       if (["Soul", "Niro", "C-Max", "Outback", "Venza", "Impreza", "A4"].some(m => model.includes(m))) body = "Wagon";
       if (model.includes("Kicks")) body = "SUV";
 
-      // Store data
       localStorage.setItem("make", make);
       localStorage.setItem("year", year);
       localStorage.setItem("body", body);
@@ -64,8 +61,6 @@ async function generate() {
       localStorage.setItem("employee", employee);
       localStorage.setItem("nDate", nDate);
 
-      // Redirect based on location
-      const location = localStorage.getItem("location") || "tolleson";
       if (location === "casa") {
         window.location.href = "ODO_PRINT_CASA.html";
       } else {
@@ -73,11 +68,41 @@ async function generate() {
       }
 
     } catch (error) {
-      console.error('Error decoding VIN:', error);
-      alert("Error fetching data.");
+      alert("VIN could not be decoded at this time. Please enter Make, Year, and Body Style manually.");
+      document.getElementById("manualInput").style.display = "block";
     }
   } else {
-    alert("INVALID VIN");
+    alert("Invalid VIN. Must be 17 characters.");
+  }
+}
+
+function submitManualData() {
+  const make = document.getElementById('manualMake').value.trim() || "Unknown";
+  const year = document.getElementById('manualYear').value.trim() || "Unknown";
+  let body = document.getElementById('manualBody').value.trim() || "Unknown";
+
+  const nameInput = document.getElementById('nameInput').value.trim() || " ";
+  const vin = document.getElementById('vinInput').value.trim() || " ";
+  const employeeInput = document.getElementById('employeeInput').value.trim() || " ";
+
+  const rDate = document.getElementById('dateInput').value;
+  const nDate = rDate ? rDate.split('-').slice(1).join('/') + '/' + rDate.split('-')[0] : " ";
+
+  const location = getSelectedLocation();
+
+  localStorage.setItem("make", make);
+  localStorage.setItem("year", year);
+  localStorage.setItem("body", body);
+  localStorage.setItem("name", nameInput);
+  localStorage.setItem("vin", vin);
+  localStorage.setItem("employee", employeeInput);
+  localStorage.setItem("nDate", nDate);
+  localStorage.setItem("location", location);
+
+  if (location === "casa") {
+    window.location.href = "ODO_PRINT_CASA.html";
+  } else {
+    window.location.href = "ODO_PRINT.html";
   }
 }
 
