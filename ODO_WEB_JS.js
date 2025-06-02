@@ -52,6 +52,7 @@ async function generate() {
       if (body.includes("Minivan")) body = "Minivan";
       if (["Soul", "Niro", "C-Max", "Outback", "Venza", "Impreza", "A4"].some(m => model.includes(m))) body = "Wagon";
       if (model.includes("Kicks")) body = "SUV";
+      if (model.includes("Rogue Sport")) body = "SUV";
 
       localStorage.setItem("make", make);
       localStorage.setItem("year", year);
