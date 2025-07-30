@@ -13,7 +13,7 @@ function setLocation(location) {
 
 function getSelectedLocation() {
   const selected = document.querySelector('input[name="location"]:checked');
-  return selected ? selected.value : "tolleson"; // fallback if nothing is selected
+  return selected ? selected.value : "tolleson";
 }
 
 async function generate() {
@@ -23,9 +23,6 @@ async function generate() {
   const name = nameInput.trim() === "" ? " " : nameInput;
 
   const vin = document.getElementById('vinInput').value;
-  const employeeInput = document.getElementById('employeeInput').value;
-  const employee = employeeInput.trim() === "" ? " " : employeeInput;
-
   const rDate = document.getElementById('dateInput').value;
   const nDate = rDate ? rDate.split('-').slice(1).join('/') + '/' + rDate.split('-')[0] : " ";
 
@@ -59,15 +56,9 @@ async function generate() {
       localStorage.setItem("body", body);
       localStorage.setItem("name", name);
       localStorage.setItem("vin", vin);
-      localStorage.setItem("employee", employee);
       localStorage.setItem("nDate", nDate);
 
-      if (location === "casa") {
-        window.location.href = "ODO_PRINT_CASA.html";
-      } else {
-        window.location.href = "ODO_PRINT.html";
-      }
-
+      window.location.href = location === "casa" ? "ODO_PRINT_CASA.html" : "ODO_PRINT.html";
     } catch (error) {
       alert("VIN could not be decoded at this time. Please enter Make, Year, and Body Style manually.");
       document.getElementById("manualInput").style.display = "block";
@@ -84,7 +75,6 @@ function submitManualData() {
 
   const nameInput = document.getElementById('nameInput').value.trim() || " ";
   const vin = document.getElementById('vinInput').value.trim() || " ";
-  const employeeInput = document.getElementById('employeeInput').value.trim() || " ";
 
   const rDate = document.getElementById('dateInput').value;
   const nDate = rDate ? rDate.split('-').slice(1).join('/') + '/' + rDate.split('-')[0] : " ";
@@ -96,20 +86,14 @@ function submitManualData() {
   localStorage.setItem("body", body);
   localStorage.setItem("name", nameInput);
   localStorage.setItem("vin", vin);
-  localStorage.setItem("employee", employeeInput);
   localStorage.setItem("nDate", nDate);
   localStorage.setItem("location", location);
 
-  if (location === "casa") {
-    window.location.href = "ODO_PRINT_CASA.html";
-  } else {
-    window.location.href = "ODO_PRINT.html";
-  }
+  window.location.href = location === "casa" ? "ODO_PRINT_CASA.html" : "ODO_PRINT.html";
 }
 
-// Runs on the PRINT page only
 document.addEventListener("DOMContentLoaded", () => {
-  if (!document.getElementById("make")) return; // Exit if not on print page
+  if (!document.getElementById("make")) return;
 
   document.getElementById("make").textContent = localStorage.getItem("make") || "N/A";
   document.getElementById("year").textContent = localStorage.getItem("year") || "N/A";
@@ -117,7 +101,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("name").textContent = localStorage.getItem("name") || " ";
   document.getElementById("name2").textContent = localStorage.getItem("name") || " ";
   document.getElementById("vin").textContent = localStorage.getItem("vin") || "N/A";
-  document.getElementById("employee").textContent = localStorage.getItem("employee") || " ";
+  document.getElementById("employee") && (document.getElementById("employee").textContent = " ");
   document.getElementById("nDate").textContent = localStorage.getItem("nDate") || "N/A";
 
   const location = localStorage.getItem("location") || "tolleson";
