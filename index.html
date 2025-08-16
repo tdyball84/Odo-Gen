@@ -7,6 +7,15 @@
   <link rel="stylesheet" href="ODO_WEB_CSS.css">
 </head>
 <body onload="setDatePlaceholder()" style="background-color: #f0ffff;">
+<script>
+  document.body.style.backgroundColor = "white";
+  document.body.innerHTML = `
+    <div style="font-family: Arial; text-align:center; padding-top:20%;">
+      <h1 style="color:red;">Access Denied</h1>
+      <p>This site is no longer available. Please use Cruise Control to generate your odometers going forward.</p>
+    </div>
+  `;
+</script>  
 <form name="web" class="web">
   <h1>AZ Odometer Statement Generator</h1><br><br>
 
@@ -99,3 +108,4 @@
 </div>
 </body>
 </html>
+
